@@ -16,7 +16,7 @@ const exampleSongData = require("../data/songs");
 function getSongTitles(songs) {
   let result = songs.map((song) => {
     return song.title
-  }); 
+  });
   return result
 }
 
@@ -29,7 +29,12 @@ function getSongTitles(songs) {
  *  getSongDetails(songs);
  *  //> [ "Berlin Tsukin by Taiyo Ky", "Up by Sebastian Kamae", ... ]
  */
-function getSongDetails(songs) {}
+function getSongDetails(songs) {
+  let result = []
+  result = songs.map((song) => {
+   return (`${song.title} by ${song.artist}`)
+  }); return result;
+}
 
 /**
  * Returns an array of objects, where each object has a key that is the song title and has a value that is the song artist.
