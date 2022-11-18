@@ -45,8 +45,14 @@ function getSongDetails(songs) {
  *  getTitleAndArtist(songs);
  *  //> [ { "Berlin Tsukin": "Taiyo Ky" }, { Up: "Sebastian Kamae" }, ... ]
  */
-function getTitleAndArtist(songs) {}
-
+function getTitleAndArtist(songs) {
+  let result = songs.map((song) => {
+    let obj = {};
+    obj[song.title] = song.artist;
+    return obj
+  }); return result
+}
+//why does obj[song.artist]; return undefined... because I used the wrong notation
 module.exports = {
   getSongTitles,
   getSongDetails,
