@@ -13,7 +13,16 @@ const exampleSongData = require("../data/songs");
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function allSongsAreOverTwoMinutes(songs) {}
+function allSongsAreOverTwoMinutes(songs) {
+  const result = songs.every((song) => {
+    if(song.runtimeInSeconds > 120) {
+      return (song.runtimeInSeconds > 120)
+    } else {
+      return (song.runtimeInSeconds > 120)
+    }
+  }); 
+  return result
+}
 
 /**
  * Returns `true` if any song is over four minutes. Otherwise, return `false`.
