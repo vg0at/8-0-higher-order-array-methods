@@ -15,12 +15,12 @@ const exampleSongData = require("../data/songs");
  */
 function allSongsAreOverTwoMinutes(songs) {
   const result = songs.every((song) => {
-    if(song.runtimeInSeconds > 120) {
+    if (song.runtimeInSeconds > 120) {
       return (song.runtimeInSeconds > 120)
-    } else {
-      return (song.runtimeInSeconds > 120)
+    // } else {
+    //   return (song.runtimeInSeconds > 120)
     }
-  }); 
+  });
   return result
 }
 
@@ -29,7 +29,14 @@ function allSongsAreOverTwoMinutes(songs) {
  * @param {Object[]} songs - An array of songs. See the song data for more.
  * @returns {boolean}
  */
-function anySongIsOverFourMinutes(songs) {}
+function anySongIsOverFourMinutes(songs) {
+  const result = songs.some((song) => {
+    if (song.runtimeInSeconds > 240) {
+      return (song.runtimeInSeconds > 240)
+    }
+  });
+  return result
+}
 
 /**
  * Returns `true` if any song is by the artist "Peanut". Otherwise, return `false`.
